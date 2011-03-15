@@ -1,4 +1,8 @@
 MAPSbeta::Application.routes.draw do
+  resources :parameters
+
+  resources :fab_processes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

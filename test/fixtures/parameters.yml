@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  optimum_value: 9.99
+  tolerance: 9.99
+  units: MyString
+
+two:
+  name: MyString
+  optimum_value: 9.99
+  tolerance: 9.99
+  units: MyString

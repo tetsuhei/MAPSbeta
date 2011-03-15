@@ -1,0 +1,31 @@
+<div id="fab_process_list">
+  <h1>Listing of Fabrication Processes</h1>
+
+  <table>
+  <% @fab_processes.each do |fab_process| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+      <td class="list_description">
+        <dl>
+          <dt><%= fab_process.name %></dt>
+          <dt><%= fab_process.category %></dt>
+          <dt><%= fab_process.parameter_id%></dt>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+
+        <%= link_to 'Show', fab_process %><br/>
+        <%= link_to 'Edit', edit_fab_process_path(fab_process) %><br/>
+        <%= link_to 'Destroy', fab_process, 
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
+<%= link_to 'New Fabrication Process', new_fab_process_path %>

@@ -1,7 +1,36 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+FabProcess.delete_all
+
+FabProcess.create(
+	:name => 'Deposition',
+	:category => 'Additive'
+	)
+
+FabProcess.create(
+	:name => 'Doping',
+	:category => 'Additive'
+	)
+
+FabProcess.create(
+	:name => 'Bonding',
+	:category => 'Additive'
+	)
+
+FabProcess.create(
+	:name => 'Etching',
+	:category => 'Removal'
+	)
+
+FabProcess.create(
+	:name => 'Cleaning',
+	:category => 'Removal'
+	)
+
+FabProcess.create(
+	:name => 'Thermal',
+	:category => 'Transformation'
+	)
+
+FabProcess.create(
+	:name => 'Radiation',
+	:category => 'Transformation'
+	)

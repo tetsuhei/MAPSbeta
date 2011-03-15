@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @fab_process.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @fab_process.category %>
+</p>
+
+<p>
+  <b>Parameter:</b>
+  <%= @fab_process.parameter_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_fab_process_path(@fab_process) %> |
+<%= link_to 'Back', fab_processes_path %>

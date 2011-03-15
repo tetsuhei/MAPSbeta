@@ -1,0 +1,2 @@
+module FabProcessesHelper
+end
