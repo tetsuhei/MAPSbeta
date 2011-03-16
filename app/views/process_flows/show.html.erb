@@ -1,0 +1,6 @@
+<h2>Your Process Flow</h2>
+<ul>    
+  <% @process_flow.process_steps.each do |pstep| %>
+    <li><%= pstep.fab_process.name %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fab process:</b>
+  <%= @process_step.fab_process_id %>
+</p>
+
+<p>
+  <b>Process flow:</b>
+  <%= @process_step.process_flow_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_process_step_path(@process_step) %> |
+<%= link_to 'Back', process_steps_path %>

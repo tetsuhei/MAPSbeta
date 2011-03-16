@@ -8,5 +8,6 @@
   <div class="entry">
     <h3><%= fab_process.category %></h3>
     <%=sanitize fab_process.name %>
+    <%= button_to 'Add to Process Flow', process_steps_path(:fab_process_id => fab_process) %>
   </div>
 <% end %>

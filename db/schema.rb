@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315205446) do
+ActiveRecord::Schema.define(:version => 20110316151139) do
 
   create_table "fab_processes", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(:version => 20110315205446) do
     t.decimal  "optimum_value"
     t.decimal  "tolerance"
     t.string   "units"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "process_flows", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "process_steps", :force => true do |t|
+    t.integer  "fab_process_id"
+    t.integer  "process_flow_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,8 @@
 MAPSbeta::Application.routes.draw do
+  resources :process_steps
+
+  resources :process_flows
+
   get "flow_generator/index"
 
   resources :parameters

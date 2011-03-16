@@ -1,0 +1,25 @@
+<%= form_for(@process_step) do |f| %>
+  <% if @process_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@process_step.errors.count, "error") %> prohibited this process_step from being saved:</h2>
+
+      <ul>
+      <% @process_step.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fab_process_id %><br />
+    <%= f.text_field :fab_process_id %>
+  </div>
+  <div class="field">
+    <%= f.label :process_flow_id %><br />
+    <%= f.text_field :process_flow_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
