@@ -1,6 +1,6 @@
 /* Global styles */
 
-#store #notice {
+#flow_generator #notice {
         color: #000;
         border: 2px solid red;
         padding: 1em;
@@ -10,13 +10,13 @@
 }
 
 
-#store h1 {
+#flow_generator h1 {
         font:  150% sans-serif;
         color: #226;
         border-bottom: 3px dotted #77d;
 }
 
-/* Styles for products/index */
+/* Styles for fab_processes/index */
 
 #fab_process_list table {
         border-collapse: collapse;
@@ -60,20 +60,65 @@
   background:   #f1fff8;
 }
 
-/* An entry in the store catalog */
+/* START:mainlayout */
+/* Styles for main page */
 
-#store  .entry {
+#banner {
+  background: #66ccFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #000066;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #000066;
+}
+
+#main {
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+  background: #000066;
+}
+
+#side a {
+  color: #fff;
+  font-size: small;
+}
+/* END:mainlayout */
+
+
+
+/* An entry in the flow_generator catalog */
+
+#flow_generator  .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#flow_generator  .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#flow_generator .entry img {
   width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -81,27 +126,27 @@
 }
 
 
-#store .entry h3 {
+#flow_generator .entry h3 {
  margin-top: 0;
  margin-bottom: 2px;
  color: #227;
 }
 
-#store .entry p {
+#flow_generator .entry p {
  margin-top: 0.5em; 
  margin-bottom: 0.8em; 
 }
 
-#store .entry .price_line {
+#flow_generator .entry .price_line {
  clear: both;
  margin-bottom: 0.5em;
 }
 
-#store .entry .add_to_cart {
+#flow_generator .entry .add_to_cart {
   position: relative;
 }
 
-#store .entry  .price {
+#flow_generator .entry  .price {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;

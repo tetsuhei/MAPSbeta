@@ -1,0 +1,12 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Fabrication Processes Catalog</h1>
+
+<% @fab_processes.each do |fab_process| %>
+  <div class="entry">
+    <h3><%= fab_process.category %></h3>
+    <%=sanitize fab_process.name %>
+  </div>
+<% end %>

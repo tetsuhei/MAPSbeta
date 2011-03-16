@@ -1,4 +1,6 @@
 MAPSbeta::Application.routes.draw do
+  get "flow_generator/index"
+
   resources :parameters
 
   resources :fab_processes
@@ -53,6 +55,7 @@ MAPSbeta::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  root :to => 'flow_generator#index', :as => 'flow_generator'
 
   # See how all your routes lay out with "rake routes"
 
