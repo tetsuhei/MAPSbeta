@@ -13,20 +13,14 @@ class ProcessFlowsController < ApplicationController
   # GET /process_flows/1
   # GET /process_flows/1.xml
   def show
-  	begin
     @process_flow = ProcessFlow.find(params[:id])
-    
-    #Error handling for bad process_flow_id
-   	rescue ActiveRecord::RecordNotFound
-   		logger.error "Attempt to access invalid process_flow #{params[:id]}"
-   		redirect_to flow_generator_url, :notice => 'Invalid process_flow'
-   	else
-   		respond_to do |format|
-	    	format.html # show.html.erb
-	    	format.xml  { render :xml => @process_flow }
-    	end
-  	end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @process_flow }
+    end
   end
+
   # GET /process_flows/new
   # GET /process_flows/new.xml
   def new
