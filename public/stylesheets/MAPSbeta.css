@@ -64,21 +64,23 @@
 /* Styles for main page */
 
 #banner {
-  background: #66ccFF;
+  background: #003300;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #000066;
+  color: #FFCC33;
   text-align: center;
 }
 
 #banner img {
   float: left;
+  margin-left: 5px;
+  margin-top: -6px;
 }
 
 #columns {
-  background: #000066;
+  background: #003300;
 }
 
 #main {
@@ -94,7 +96,7 @@
   padding-left: 1em;
   padding-bottom: 1em;
   width: 16em;
-  background: #000066;
+  background: #003300;
 }
 
 #side a {
