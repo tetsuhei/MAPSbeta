@@ -4,3 +4,6 @@
     <li><%= pstep.fab_process.name %></li>
   <% end %>
 </ul>
+
+<%= button_to 'Reset Process Flow', @process_flow, :method => :delete,
+	:confirm => 'Are you sure?' %>

@@ -80,9 +80,10 @@ class ProcessFlowsController < ApplicationController
   def destroy
     @process_flow = ProcessFlow.find(params[:id])
     @process_flow.destroy
-
+    session[:process_flow_id] = nil
+    
     respond_to do |format|
-      format.html { redirect_to(process_flows_url) }
+      format.html { redirect_to(flow_generator_url, :notice => 'Process flow deleted') }
       format.xml  { head :ok }
     end
   end
