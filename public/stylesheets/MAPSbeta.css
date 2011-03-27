@@ -44,6 +44,7 @@
 
 #fab_process_list .list_description dd {
         margin: 0;
+        font-style: italic; 
 }
 
 #fab_process_list .list_actions {

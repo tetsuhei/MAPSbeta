@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110316151139) do
+ActiveRecord::Schema.define(:version => 20110326022238) do
 
   create_table "fab_processes", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110316151139) do
     t.integer  "parameter_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "parameters", :force => true do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20110316151139) do
     t.integer  "process_flow_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantity"
   end
 
 end

@@ -14,7 +14,7 @@ class ProcessStepsController < ApplicationController
   # GET /process_steps/1.xml
   def show
     @process_step = ProcessStep.find(params[:id])
-
+	@process_steps_count = ProcessStep.count
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @process_step }
@@ -46,7 +46,7 @@ class ProcessStepsController < ApplicationController
   
     respond_to do |format|
       if @process_step.save
-        format.html { redirect_to(@process_step.process_flow, :notice => 'Process step was successfully created.') }
+        format.html { redirect_to(@process_step.process_flow) }
         format.xml  { render :xml => @process_step, :status => :created, :location => @process_step }
       else
         format.html { render :action => "new" }

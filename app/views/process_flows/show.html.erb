@@ -1,9 +1,16 @@
-<h2>Your Process Flow</h2>
-<ul>    
+<div class="process_flow_title">Your Process Flow</div>
+<table>
+	
   <% @process_flow.process_steps.each do |pstep| %>
-    <li><%= pstep.fab_process.name %></li>
+    <tr>
+      <td><%= pstep.fab_process.name %></td>
+      <td><%= pstep.fab_process.category %></td>
+    </tr>
   <% end %>
-</ul>
+  
+</table>
+
+<%= @process_steps_count %></td>
 
 <%= button_to 'Reset Process Flow', @process_flow, :method => :delete,
 	:confirm => 'Are you sure?' %>

@@ -3,6 +3,12 @@ require 'test_helper'
 class FabProcessesControllerTest < ActionController::TestCase
   setup do
     @fab_process = fab_processes(:one)
+    @update = {
+    	:name =>	'Test name',
+    	:category => 'Test category',
+    	:parameter_id => 1,
+    	:description => 'Test description of the fab_process'
+    }
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class FabProcessesControllerTest < ActionController::TestCase
 
   test "should create fab_process" do
     assert_difference('FabProcess.count') do
-      post :create, :fab_process => @fab_process.attributes
+      post :create, :fab_process => @update
     end
 
     assert_redirected_to fab_process_path(assigns(:fab_process))
@@ -35,7 +41,7 @@ class FabProcessesControllerTest < ActionController::TestCase
   end
 
   test "should update fab_process" do
-    put :update, :id => @fab_process.to_param, :fab_process => @fab_process.attributes
+    put :update, :id => @fab_process.to_param, :fab_process => @update
     assert_redirected_to fab_process_path(assigns(:fab_process))
   end
 

@@ -8,7 +8,8 @@
       <td class="list_description">
         <dl>
           <dt><%= fab_process.name %></dt>
-          <dt><%= fab_process.category %></dt>
+          <dd><%= truncate(strip_tags(fab_process.description), :length => 200)%></dd>
+          <dt><i><%= fab_process.category %></i></dt>
           <dt><%= fab_process.parameter_id%></dt>
         </dl>
       </td>
